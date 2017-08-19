@@ -84,6 +84,9 @@ $switch-paddle-transition: all 0.25s ease-out !default
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
+      input
+        &:checked ~ label
+          background: $color
 
   +switch-size($size-normal)
   &.is-small
