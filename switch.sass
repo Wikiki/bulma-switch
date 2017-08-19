@@ -1,0 +1,94 @@
+$switch-background: $grey-light !default
+$switch-background-active: $primary !default
+$switch-radius: $radius !default
+$switch-margin: 1rem !default
+$switch-paddle-background: $white !default
+$switch-paddle-offset: 0.25rem !default
+$switch-paddle-transition: all 0.25s ease-out !default
+
+// Use a mixin to define all ratios in the same spot
+=switch-size($size)
+  $switch-height: $size * 2
+  $switch-width: $switch-height * 2
+  $paddle-height: $switch-height - ($switch-paddle-offset * 2)
+  $paddle-width: $switch-height - ($switch-paddle-offset * 2)
+  $paddle-active-offest: $switch-width - $paddle-width - $switch-paddle-offset
+
+  font-size: $size
+  min-height: $switch-height
+  height: $switch-height
+
+  // Change the visual style when the switch is active
+  input
+    &:checked ~ label
+      background: $switch-background-active
+
+      &::before
+        left: $paddle-active-offest
+
+  label
+    position: relative
+    display: block
+    width: $switch-width
+    height: $switch-height
+    border-radius: $switch-radius
+    background: $switch-background
+    transition: $switch-paddle-transition
+    line-height: $switch-height
+    // Resetting these <label> presets so type styles cascade down
+    cursor: pointer
+
+    input + &
+      margin: 0
+
+    &::after
+      position: absolute
+      content: attr(data-label)
+      left: $size * 4.5
+      width: 100%
+
+    &::before
+      position: absolute
+      top: $switch-paddle-offset
+      left: $switch-paddle-offset
+
+      display: block
+      width: $paddle-width
+      height: $paddle-height
+
+      transform: translate3d(0, 0, 0)
+      border-radius: $switch-radius
+      background: $switch-paddle-background
+      transition: $switch-paddle-transition
+      content: ''
+
+  input
+    &:checked
+      ~ label
+        &::before
+          left: $paddle-active-offest
+
+.switch
+  position: relative
+  margin-bottom: $switch-margin
+  outline: 0
+  user-select: none
+
+  // <input> element
+  input
+    position: absolute
+    margin-bottom: 0
+    opacity: 0
+
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &.is-#{$name}
+
+  +switch-size($size-normal)
+  &.is-small
+    +switch-size($size-small)
+  &.is-medium
+    +switch-size($size-medium)
+  &.is-large
+    +switch-size($size-large)
