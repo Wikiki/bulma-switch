@@ -28,6 +28,8 @@ Usage
 </div>
 ```
 
+To display a label at the right of the checkbox just use the ```data-label``` attribute.
+
 Variables
 ---
 This extension uses Bulma's color modifiers and have the following variables

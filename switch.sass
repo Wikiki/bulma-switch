@@ -1,7 +1,6 @@
 $switch-background: $grey-light !default
 $switch-background-active: $primary !default
 $switch-radius: $radius !default
-$switch-margin: 1rem !default
 $switch-paddle-background: $white !default
 $switch-paddle-offset: 0.25rem !default
 $switch-paddle-transition: all 0.25s ease-out !default
@@ -70,23 +69,16 @@ $switch-paddle-transition: all 0.25s ease-out !default
 
 .switch
   position: relative
-  margin-bottom: $switch-margin
   outline: 0
   user-select: none
+  align-self: center
+  margin-left: .5rem
 
   // <input> element
   input
     position: absolute
     margin-bottom: 0
     opacity: 0
-
-  @each $name, $pair in $colors
-    $color: nth($pair, 1)
-    $color-invert: nth($pair, 2)
-    &.is-#{$name}
-      input
-        &:checked ~ label
-          background: $color
 
   +switch-size($size-normal)
   &.is-small
@@ -95,3 +87,11 @@ $switch-paddle-transition: all 0.25s ease-out !default
     +switch-size($size-medium)
   &.is-large
     +switch-size($size-large)
+
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &.is-#{$name}
+      input
+        &:checked ~ label
+          background: $color
