@@ -9,26 +9,24 @@ Usage
 ```html
 <div class="switch">
   <input id="yes-no" type="checkbox" name="exampleSwitch">
-  <label for="yes-no" data-label="Yes / No"></label>
+  <label for="yes-no">Yes / No</label>
 </div>
 
 <div class="switch is-small">
   <input id="yes-no2" type="checkbox" name="exampleSwitch">
-  <label for="yes-no2" data-label="Yes / No"></label>
+  <label for="yes-no2">Yes / No</label>
 </div>
 
 <div class="switch is-medium">
   <input id="yes-no3" type="checkbox" name="exampleSwitch">
-  <label for="yes-no3" data-label="Yes / No"></label>
+  <label for="yes-no3">Yes / No</label>
 </div>
 
 <div class="switch is-large">
   <input id="yes-no4" type="checkbox" name="exampleSwitch">
-  <label for="yes-no4" data-label="Yes / No"></label>
+  <label for="yes-no4">Yes / No</label>
 </div>
 ```
-
-To display a label at the right of the checkbox just use the ```data-label``` attribute.
 
 Variables
 ---
