@@ -13,10 +13,6 @@ $switch-paddle-transition: all 0.25s ease-out !default
   $paddle-width: $switch-height - ($switch-paddle-offset * 2)
   $paddle-active-offest: $switch-width - $paddle-width - $switch-paddle-offset
 
-  font-size: $size
-  min-height: $switch-height
-  height: $switch-height
-
   // Change the visual style when the switch is active
   input
     &:checked ~ label
@@ -34,19 +30,13 @@ $switch-paddle-transition: all 0.25s ease-out !default
     background: $switch-background
     transition: $switch-paddle-transition
     line-height: $switch-height
-    text-indent: 4.5rem
+    text-indent: $size * 4.5
     white-space: nowrap
     // Resetting these <label> presets so type styles cascade down
     cursor: pointer
 
     input + &
       margin: 0
-
-    &::after
-      position: absolute
-      content: attr(data-label)
-      left: $size * 4.5
-      width: 100%
 
     &::before
       position: absolute
@@ -81,6 +71,7 @@ $switch-paddle-transition: all 0.25s ease-out !default
     position: absolute
     margin-bottom: 0
     opacity: 0
+    left: 0
 
   +switch-size($size-normal)
   &.is-small
