@@ -28,7 +28,15 @@ Usage
 </div>
 ```
 
-You can display the label text at bottom by adding the modifier ```has-label-bottom```to the switch element (useful if you want to display the checkbox centered for example)
+Modifiers
+---
+You can use following modifiers:
+
+Name | Description
+-----|------------
+is-outlined | No background - just borders
+is-rounded | rounded borders
+has-label-bottom | Display the label text at bottom
 
 Variables
 ---
