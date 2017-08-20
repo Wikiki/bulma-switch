@@ -1,7 +1,7 @@
 # bulma-switch
 Bulma's extension to display checkbox as a toggle button
 
-![Switch example](switch-example.png)]
+![Switch example](switch-example.png)
 
 Usage
 ---
@@ -11,26 +11,11 @@ Usage
   <input id="yes-no" type="checkbox" name="exampleSwitch">
   <label for="yes-no">Yes / No</label>
 </div>
-
-<div class="switch is-small">
-  <input id="yes-no2" type="checkbox" name="exampleSwitch">
-  <label for="yes-no2">Yes / No</label>
-</div>
-
-<div class="switch is-medium">
-  <input id="yes-no3" type="checkbox" name="exampleSwitch">
-  <label for="yes-no3">Yes / No</label>
-</div>
-
-<div class="switch is-large">
-  <input id="yes-no4" type="checkbox" name="exampleSwitch">
-  <label for="yes-no4">Yes / No</label>
-</div>
 ```
 
 Modifiers
 ---
-You can use following modifiers:
+You can use following modifiers (in addition to Bulma's color modifiers):
 
 Name | Description
 -----|------------
