@@ -1,7 +1,7 @@
 # bulma-switch
 Bulma's extension to display checkbox as a toggle button
 
-<img src="https://img4.hostingpics.net/pics/671276ScreenShot20170819at124953.png" width="50%">
+![Switch example](switch-example.png)]
 
 Usage
 ---
