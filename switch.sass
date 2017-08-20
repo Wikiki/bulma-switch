@@ -13,6 +13,11 @@ $switch-paddle-transition: all 0.25s ease-out !default
   $paddle-width: $switch-height - ($switch-paddle-offset * 2)
   $paddle-active-offest: $switch-width - $paddle-width - $switch-paddle-offset
 
+  &.has-label-bottom
+    label
+      text-indent: -50%
+      padding-top: $size * 2
+
   // Change the visual style when the switch is active
   input
     &:checked ~ label
@@ -64,7 +69,7 @@ $switch-paddle-transition: all 0.25s ease-out !default
   outline: 0
   user-select: none
   align-self: center
-  margin-left: .5rem
+  display: inline-block
 
   // <input> element
   input

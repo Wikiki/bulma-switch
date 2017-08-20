@@ -28,6 +28,8 @@ Usage
 </div>
 ```
 
+You can display the label text at bottom by adding the modifier ```has-label-bottom```to the switch element (useful if you want to display the checkbox centered for example)
+
 Variables
 ---
 This extension uses Bulma's color modifiers and have the following variables
