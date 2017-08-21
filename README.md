@@ -15,7 +15,7 @@ Usage
 
 Modifiers
 ---
-You can use following modifiers (in addition to Bulma's color modifiers):
+You can use following modifiers (in addition to Bulma's color & size modifiers):
 
 Name | Description
 -----|------------
