@@ -9,7 +9,7 @@ $switch-paddle-transition: all 0.25s ease-out !default
 
 // Use a mixin to define all ratios in the same spot
 =switch-size($size)
-  $switch-height: $size * 2
+  $switch-height: $size * 1.5
   $switch-width: $switch-height * 2
   $paddle-height: $switch-height - ($switch-paddle-offset * 2)
   $paddle-width: $switch-height - ($switch-paddle-offset * 2)
@@ -18,7 +18,7 @@ $switch-paddle-transition: all 0.25s ease-out !default
   &.has-label-bottom
     label
       text-indent: -50%
-      padding-top: $size * 2
+      padding-top: $size * 1.5
 
   label
     position: relative
