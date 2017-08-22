@@ -18,7 +18,7 @@ $switch-paddle-transition: all 0.25s ease-out !default
   + label
     position: relative
     display: flex
-    line-height: $switch-height
+    font-size: $size
     padding-left: $switch-width + .5
     // Resetting these <label> presets so type styles cascade down
     cursor: pointer
@@ -39,7 +39,7 @@ $switch-paddle-transition: all 0.25s ease-out !default
     &::after
       display: block
       position: absolute
-      top: calc(50% - (#{$paddle-height}  / 2))
+      top: ( $switch-height / 2 ) - ( $paddle-height / 2 )
       left: $switch-paddle-offset
       width: $paddle-width
       height: $paddle-height
