@@ -88,12 +88,15 @@ $switch-paddle-transition: all 0.25s ease-out !default
   left: 0
 
   &[disabled]
+    cursor: not-allowed
     + label
       opacity: 0.5
       &::before
         opactiy: 0.5
       &::after
         opactiy: 0.5
+      &:hover
+        cursor: not-allowed
 
   +switch-size($size-normal)
   &.is-small
