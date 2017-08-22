@@ -87,6 +87,14 @@ $switch-paddle-transition: all 0.25s ease-out !default
   opacity: 0
   left: 0
 
+  &[disabled]
+    + label
+      opacity: 0.5
+      &::before
+        opactiy: 0.5
+      &::after
+        opactiy: 0.5
+
   +switch-size($size-normal)
   &.is-small
     +switch-size($size-small)
