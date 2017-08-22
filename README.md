@@ -21,7 +21,6 @@ Name | Description
 -----|------------
 is-outlined | No background - just borders
 is-rounded | rounded borders
-has-label-bottom | Display the label text at bottom
 
 Variables
 ---

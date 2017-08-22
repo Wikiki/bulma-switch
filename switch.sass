@@ -15,88 +15,77 @@ $switch-paddle-transition: all 0.25s ease-out !default
   $paddle-width: $switch-height - ($switch-paddle-offset * 2)
   $paddle-active-offest: $switch-width - $paddle-width - ($switch-paddle-offset * 1.5)
 
-  &.has-label-bottom
-    label
-      text-indent: -50%
-      padding-top: $size * 1.5
-
-  label
+  + label
     position: relative
-    display: block
-    width: $switch-width
-    height: $switch-height
-    border: $switch-border
-    border-radius: $switch-radius
-    background: $switch-background
-    transition: $switch-paddle-transition
+    display: flex
     line-height: $switch-height
-    text-indent: $size * 4.5
-    white-space: nowrap
+    text-indent: $switch-width + 0.5
     // Resetting these <label> presets so type styles cascade down
     cursor: pointer
 
-    input + &
-      margin: 0
-
     &::before
+      position: absolute
+      display: block
+      top: 0
+      left: 0
+      width: $switch-width
+      height: $switch-height
+      border: $switch-border
+      border-radius: $switch-radius
+      background: $switch-background
+      content: ''
+
+
+    &::after
+      display: block
       position: absolute
       top: calc(50% - (#{$paddle-height}  / 2))
       left: $switch-paddle-offset
-
-      display: block
       width: $paddle-width
       height: $paddle-height
-
       transform: translate3d(0, 0, 0)
       border-radius: $switch-radius
       background: $switch-paddle-background
       transition: $switch-paddle-transition
       content: ''
 
-  input
-    &:checked
-      ~ label
+  &:checked
+    + label
+      &::before
         background: $switch-background-active
-
-    &:checked
-      ~ label
-        &::before
-          left: $paddle-active-offest
+      &::after
+        left: $paddle-active-offest
 
   &.is-outlined
-    input
-      ~ label
+    + label
+      &::before
         background-color: transparent
         border-color: $switch-background
+      &::after
+        background: $switch-background
+    &:checked
+      + label
         &::before
-          background: $switch-background
-      &:checked
-        ~ label
           background-color: transparent
           border-color: $switch-background-active
-          &::before
-            background: $switch-paddle-background-active
+        &::after
+          background: $switch-paddle-background-active
+
   &.is-rounded
-    input
-      ~ label
+    + label
+      &::before
         border-radius: $radius-large * 4
-        &::before
-          border-radius: 50%
+      &::after
+        border-radius: 50%
 
 
-.switch
-  position: relative
+.switch[type="checkbox"]
   outline: 0
   user-select: none
-  align-self: center
-  display: inline-block
-
-  // <input> element
-  input
-    position: absolute
-    margin-bottom: 0
-    opacity: 0
-    left: 0
+  position: absolute
+  margin-bottom: 0
+  opacity: 0
+  left: 0
 
   +switch-size($size-normal)
   &.is-small
@@ -110,15 +99,15 @@ $switch-paddle-transition: all 0.25s ease-out !default
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
-      input
-        &:checked
-          ~ label
+      &:checked
+        + label
+          &::before
             background: $color
       &.is-outlined
-        input
-          &:checked
-            ~ label
+        &:checked
+          + label
+            &::before
               background-color: transparent
               border-color: $color !important
-              &::before
-                background: $color
+            &::after
+              background: $color
