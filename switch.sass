@@ -19,6 +19,7 @@ $switch-paddle-transition: all 0.25s ease-out !default
     position: relative
     display: flex
     font-size: $size
+    line-height: $size
     padding-left: $switch-width + .5
     // Resetting these <label> presets so type styles cascade down
     cursor: pointer
@@ -26,7 +27,7 @@ $switch-paddle-transition: all 0.25s ease-out !default
     &::before
       position: absolute
       display: block
-      top: 0
+      top: -0.5rem
       left: 0
       width: $switch-width
       height: $switch-height
@@ -39,7 +40,7 @@ $switch-paddle-transition: all 0.25s ease-out !default
     &::after
       display: block
       position: absolute
-      top: ( $switch-height / 2 ) - ( $paddle-height / 2 )
+      top: -0.25rem
       left: $switch-paddle-offset
       width: $paddle-width
       height: $paddle-height
@@ -83,9 +84,7 @@ $switch-paddle-transition: all 0.25s ease-out !default
   outline: 0
   user-select: none
   position: absolute
-  margin-bottom: 0
   opacity: 0
-  left: 0
 
   &[disabled]
     cursor: not-allowed
