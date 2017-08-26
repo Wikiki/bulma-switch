@@ -1,5 +1,6 @@
 # bulma-switch
 Bulma's extension to display checkbox as a toggle button
+(find all my bulma's extensions [here](https://wikiki.github.io/bulma-extensions/overview))
 
 ![Switch example](switch-example.png)
 
