@@ -16,10 +16,9 @@ $switch-paddle-transition: all 0.25s ease-out !default
 
   + label
     position: relative
-    display: flex
+    display: inline-block
     font-size: $size
     padding-left: $switch-width + .5
-    // Resetting these <label> presets so type styles cascade down
     cursor: pointer
 
     &::before
@@ -84,6 +83,7 @@ $switch-paddle-transition: all 0.25s ease-out !default
   position: absolute
   margin-bottom: 0
   opacity: 0
+  left: 0
 
   &[disabled]
     cursor: not-allowed
