@@ -71,6 +71,14 @@ $switch-paddle-transition: all 0.25s ease-out !default
         &::after
           background: $switch-paddle-background-active
 
+  &.is-thin
+    + label
+      &::before
+        top: $switch-height / 2.75
+        height: $switch-height / 4
+      &::after
+        box-shadow: 0px 0px 3px $grey
+
   &.is-rounded
     + label
       &::before
@@ -122,3 +130,8 @@ $switch-paddle-transition: all 0.25s ease-out !default
               border-color: $color !important
             &::after
               background: $color
+      &.is-thin
+        &.is-outlined
+          + label
+            &::after
+              box-shadow: none
