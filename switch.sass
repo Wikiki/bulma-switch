@@ -49,12 +49,28 @@ $switch-paddle-transition: all 0.25s ease-out !default
       transition: $switch-paddle-transition
       content: ''
 
+  &.is-rtl
+    + label
+      padding-left: 0
+      padding-right: $switch-width + .5
+      &::before
+        left: auto
+        right: 0
+      &::after
+        left: auto
+        right: $switch-paddle-offset
+
   &:checked
     + label
       &::before
         background: $switch-background-active
       &::after
         left: $paddle-active-offest
+    &.is-rtl
+      + label
+        &::after
+          left: auto
+          right: $paddle-active-offest
 
   &.is-outlined
     + label
