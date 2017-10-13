@@ -2,6 +2,8 @@
 Bulma's extension to display checkbox as a toggle button
 (find all my bulma's extensions [here](https://wikiki.github.io/bulma-extensions/overview))
 
+[![npm](https://img.shields.io/npm/v/bulma-switch.svg)](https://www.npmjs.com/package/bulma-switch)
+[![npm](https://img.shields.io/npm/dm/bulma-switch.svg)](https://www.npmjs.com/package/bulma-switch)
 [![Build Status](https://travis-ci.org/Wikiki/bulma-switch.svg?branch=master)](https://travis-ci.org/Wikiki/bulma-switch)
 
 ![Switch example](switch-example.png)
