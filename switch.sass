@@ -1,6 +1,7 @@
 $switch-background: $grey-light !default
 $switch-border: .1rem solid transparent !default
 $switch-background-active: $primary !default
+$switch-focus-box-shadow-size: 0 0 0 0.125em !default
 $switch-radius: $radius !default
 $switch-paddle-background: $white !default
 $switch-paddle-background-active: $primary !default
@@ -60,6 +61,22 @@ $switch-paddle-transition: all 0.25s ease-out !default
         left: auto
         right: $switch-paddle-offset
 
+  &:focus,
+  &.is-focused
+    &:not(:active)
+      + label
+        &::before
+          box-shadow: $switch-focus-box-shadow-size rgba($switch-background, 0.25)
+  &:hover,
+  &.is-hovered
+    + label
+      &::before
+        background: darken($switch-background, 2.5%)
+  &:active,
+  &.is-active
+    + label
+      &::before
+        background: darken($switch-background, 5%)
   &:checked
     + label
       &::before
@@ -71,6 +88,22 @@ $switch-paddle-transition: all 0.25s ease-out !default
         &::after
           left: auto
           right: $paddle-active-offest
+    &:focus,
+    &.is-focused
+      &:not(:active)
+        + label
+          &::before
+            box-shadow: $switch-focus-box-shadow-size rgba($switch-background-active, 0.25)
+    &:hover,
+    &.is-hovered
+      + label
+        &::before
+          background: darken($switch-background-active, 2.5%)
+    &:active,
+    &.is-active
+      + label
+        &::before
+          background: darken($switch-background-active, 5%)
 
   &.is-outlined
     + label
@@ -79,6 +112,20 @@ $switch-paddle-transition: all 0.25s ease-out !default
         border-color: $switch-background
       &::after
         background: $switch-background
+    &:hover,
+    &.is-hovered
+      + label
+        &::before
+          border-color: darken($switch-background, 2.5%)
+        &::after
+          background: darken($switch-background, 2.5%)
+    &:active,
+    &.is-active
+      + label
+        &::before
+          border-color: darken($switch-background, 2.5%)
+        &::after
+          background: darken($switch-background, 5%)
     &:checked
       + label
         &::before
@@ -86,6 +133,20 @@ $switch-paddle-transition: all 0.25s ease-out !default
           border-color: $switch-background-active
         &::after
           background: $switch-paddle-background-active
+      &:hover,
+      &.is-hovered
+        + label
+          &::before
+            border-color: darken($switch-background-active, 2.5%)
+          &::after
+            background: darken($switch-background-active, 2.5%)
+      &:active,
+      &.is-active
+        + label
+          &::before
+            border-color: darken($switch-background-active, 2.5%)
+          &::after
+            background: darken($switch-background-active, 5%)
 
   &.is-thin
     + label
@@ -106,7 +167,11 @@ $switch-paddle-transition: all 0.25s ease-out !default
 .switch[type="checkbox"]
   outline: 0
   user-select: none
-  display: none
+  display: initial
+  opacity: 0
+  position: absolute
+  width: 100%
+  height: 100%
 
   &[disabled]
     cursor: not-allowed
@@ -116,7 +181,8 @@ $switch-paddle-transition: all 0.25s ease-out !default
         opactiy: 0.5
       &::after
         opactiy: 0.5
-      &:hover
+      &:hover,
+      &.is-hovered
         cursor: not-allowed
 
   +switch-size($size-normal)
@@ -135,27 +201,73 @@ $switch-paddle-transition: all 0.25s ease-out !default
         + label
           &::before
             background: $color
+        &:focus,
+        &.is-focused
+          &:not(:active)
+            + label
+              &::before
+                box-shadow: $switch-focus-box-shadow-size rgba($color, 0.25)
+        &:hover,
+        &.is-hovered
+          + label
+            &::before
+              background: darken($color, 2.5%)
+        &:active,
+        &.is-active
+          + label
+            &::before
+              background: darken($color, 5%)
       &.is-outlined
         &:checked
           + label
             &::before
               background-color: transparent
-              border-color: $color !important
+              border-color: $color
             &::after
               background: $color
+          &:hover,
+          &.is-hovered
+            + label
+              &::before
+                border-color: darken($color, 2.5%)
+              &::after
+                background: darken($color, 2.5%)
+          &:active,
+          &.is-active
+            + label
+              &::before
+                border-color: darken($color, 2.5%)
+              &::after
+                background: darken($color, 5%)
       &.is-thin
         &.is-outlined
           + label
             &::after
               box-shadow: none
     &.is-unchecked-#{$name}
+      &:hover,
+      &.is-hovered,
+      &:active,
+      &.is-active
+        + label
+          &::before
+            background: $color
       + label
         &::before
           background: $color
       &.is-outlined
+        &:hover,
+        &.is-hovered,
+        &:active,
+        &.is-active
+          + label
+            &::before
+              border-color: $color
+            &::after
+              background: $color
         + label
           &::before
             background-color: transparent
-            border-color: $color !important
+            border-color: $color
           &::after
             background: $color
