@@ -244,3 +244,30 @@ $switch-paddle-transition: all 0.25s ease-out !default
           + label
             &::after
               box-shadow: none
+    &.is-unchecked-#{$name}
+      &:hover,
+      &.is-hovered,
+      &:active,
+      &.is-active
+        + label
+          &::before
+            background: $color
+      + label
+        &::before
+          background: $color
+      &.is-outlined
+        &:hover,
+        &.is-hovered,
+        &:active,
+        &.is-active
+          + label
+            &::before
+              border-color: $color
+            &::after
+              background: $color
+        + label
+          &::before
+            background-color: transparent
+            border-color: $color
+          &::after
+            background: $color
