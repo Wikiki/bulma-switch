@@ -10,4 +10,4 @@ Bulma's extension to display checkbox as a toggle button
 
 Documentation & Demo
 ---
-You can find the Documentation and a demo [here](https://wikiki.github.io/bulma-extensions/switch)
+You can find the Documentation and a demo [here](https://wikiki.github.io/form/switch/)
