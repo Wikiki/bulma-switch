@@ -1,6 +1,6 @@
 {
   "name": "bulma-switch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Display classic checkbox as a switch button, in different colors, sizes, and states ",
   "main": "switch.sass",
   "scripts": {
@@ -23,5 +23,15 @@
   "bugs": {
     "url": "https://github.com/Wikiki/bulma-switch/issues"
   },
-  "homepage": "https://github.com/Wikiki/bulma-switch#readme"
+  "homepage": "https://github.com/Wikiki/bulma-switch#readme",
+  "devDependencies": {
+    "bulma": "^0.6.1"
+  },
+  "files": [
+    "switch.sass",
+    "switch.css",
+    "switch.min.css",
+    "LICENSE",
+    "README.md"
+  ]
 }
