@@ -1,0 +1,25 @@
+{
+  "name": "bulma-switch",
+  "description": "Display classic checkbox as a switch button, in different colors, sizes, and states",
+  "main": "switch.sass",
+  "authors": [
+    "Wikiki <wikiki@protonmail.com> (https://wikiki.github.io/bulma-extensions/overview)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Bulma",
+    "bulma",
+    "bulma.io",
+    "extensions",
+    "switch",
+    "checkbox"
+  ],
+  "homepage": "https://github.com/Wikiki/bulma-switch",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
