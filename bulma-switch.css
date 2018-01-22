@@ -24,11 +24,11 @@
 }
 
 .switch[type="checkbox"][disabled] + label::before {
-  opactiy: 0.5;
+  opacity: 0.5;
 }
 
 .switch[type="checkbox"][disabled] + label::after {
-  opactiy: 0.5;
+  opacity: 0.5;
 }
 
 .switch[type="checkbox"][disabled] + label:hover {
