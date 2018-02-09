@@ -1,3 +1,34 @@
+<a name="0.1.9"></a>
+## [0.1.9](https://github.com/Wikiki/bulma-switch/compare/0.1.8...0.1.9) (2018-02-09)
+
+
+
+<a name="0.1.8"></a>
+## [0.1.8](https://github.com/Wikiki/bulma-switch/compare/0.1.7...0.1.8) (2018-02-09)
+
+
+
+<a name="0.1.7"></a>
+## [0.1.7](https://github.com/Wikiki/bulma-switch/compare/0.1.6...0.1.7) (2018-02-09)
+
+
+
+<a name="0.1.6"></a>
+## [0.1.6](https://github.com/Wikiki/bulma-switch/compare/0.1.2...0.1.6) (2018-02-09)
+
+
+### Bug Fixes
+
+* **bower:** Add missing version ([c860841](https://github.com/Wikiki/bulma-switch/commit/c860841))
+
+
+### Features
+
+* **gulp:** Add gulp dependencies ([4155c63](https://github.com/Wikiki/bulma-switch/commit/4155c63))
+* **gulp:** Add release task ([24451c6](https://github.com/Wikiki/bulma-switch/commit/24451c6))
+
+
+
 # Change Log
 
 ## [Unreleased](https://github.com/wikiki/bulma-switch/tree/HEAD)
