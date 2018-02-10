@@ -1,3 +1,8 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/Wikiki/bulma-switch/compare/0.1.12...1.0.0) (2018-02-10)
+
+
+
 <a name="0.1.12"></a>
 ## [0.1.12](https://github.com/Wikiki/bulma-switch/compare/0.1.11...0.1.12) (2018-02-10)
 
