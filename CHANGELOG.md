@@ -1,3 +1,13 @@
+<a name="0.1.10"></a>
+## [0.1.10](https://github.com/Wikiki/bulma-switch/compare/0.1.9...0.1.10) (2018-02-10)
+
+
+### Bug Fixes
+
+* **gulp:** Correct dist filenames ([9ba0e1b](https://github.com/Wikiki/bulma-switch/commit/9ba0e1b))
+
+
+
 <a name="0.1.9"></a>
 ## [0.1.9](https://github.com/Wikiki/bulma-switch/compare/0.1.8...0.1.9) (2018-02-09)
 
