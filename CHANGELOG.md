@@ -1,3 +1,33 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/Wikiki/bulma-switch/compare/0.1.12...1.0.0) (2018-02-10)
+
+
+
+<a name="0.1.12"></a>
+## [0.1.12](https://github.com/Wikiki/bulma-switch/compare/0.1.11...0.1.12) (2018-02-10)
+
+
+
+<a name="0.1.11"></a>
+## [0.1.11](https://github.com/Wikiki/bulma-switch/compare/0.1.10...0.1.11) (2018-02-10)
+
+
+### Bug Fixes
+
+* **gulp:** Use UMD modules style ([f9d1597](https://github.com/Wikiki/bulma-switch/commit/f9d1597))
+
+
+
+<a name="0.1.10"></a>
+## [0.1.10](https://github.com/Wikiki/bulma-switch/compare/0.1.9...0.1.10) (2018-02-10)
+
+
+### Bug Fixes
+
+* **gulp:** Correct dist filenames ([9ba0e1b](https://github.com/Wikiki/bulma-switch/commit/9ba0e1b))
+
+
+
 <a name="0.1.9"></a>
 ## [0.1.9](https://github.com/Wikiki/bulma-switch/compare/0.1.8...0.1.9) (2018-02-09)
 
