@@ -6,6 +6,7 @@ $switch-paddle-background: $white !default
 $switch-paddle-background-active: $primary !default
 $switch-paddle-offset: 0.25rem !default
 $switch-paddle-transition: all 0.25s ease-out !default
+$switch-focus: 1px dotted $grey-light !default
 
 =switch-size($size)
   $switch-height: $size * 1.5
@@ -23,7 +24,8 @@ $switch-paddle-transition: all 0.25s ease-out !default
     padding-top: .2rem
     cursor: pointer
 
-    &::before
+    &::before,
+    &:before
       position: absolute
       display: block
       top: 0
@@ -35,8 +37,8 @@ $switch-paddle-transition: all 0.25s ease-out !default
       background: $switch-background
       content: ''
 
-
-    &::after
+    &::after,
+    &:after
       display: block
       position: absolute
       top: ( $switch-height / 2 ) - ( $paddle-height / 2 )
@@ -53,53 +55,65 @@ $switch-paddle-transition: all 0.25s ease-out !default
     + label
       padding-left: 0
       padding-right: $switch-width + .5
-      &::before
+      &::before,
+      &:before
         left: auto
         right: 0
-      &::after
+      &::after,
+      &:after
         left: auto
         right: $switch-paddle-offset
 
   &:checked
     + label
-      &::before
+      &::before,
+      &:before
         background: $switch-background-active
       &::after
         left: $paddle-active-offest
     &.is-rtl
       + label
-        &::after
+        &::after,
+        &:after
           left: auto
           right: $paddle-active-offest
 
   &.is-outlined
     + label
-      &::before
+      &::before,
+      &:before
         background-color: transparent
         border-color: $switch-background
-      &::after
+      &::after,
+      &:after
         background: $switch-background
     &:checked
       + label
-        &::before
+        &::before,
+        &:before
           background-color: transparent
           border-color: $switch-background-active
-        &::after
+        &::after,
+        &:after
           background: $switch-paddle-background-active
 
   &.is-thin
     + label
-      &::before
+      &::before,
+      &:before
         top: $switch-height / 2.75
         height: $switch-height / 4
-      &::after
+      &::after,
+      &:after
         box-shadow: 0px 0px 3px $grey
 
   &.is-rounded
     + label
-      &::before
+      &::before,
+      &:before
         border-radius: $radius-large * 4
-      &::after
+      &::after,
+      &:after
         border-radius: 50%
 
 
@@ -110,13 +124,23 @@ $switch-paddle-transition: all 0.25s ease-out !default
   position: absolute
   opacity: 0
 
+  &:focus
+    + label
+      &::before,
+      &:before,
+      &::after,
+      &:after
+        outline: $switch-focus
+
   &[disabled]
     cursor: not-allowed
     + label
       opacity: 0.5
-      &::before
+      &::before,
+      &:before
         opacity: 0.5
-      &::after
+      &::after,
+      &:after
         opacity: 0.5
       &:hover
         cursor: not-allowed
@@ -135,29 +159,36 @@ $switch-paddle-transition: all 0.25s ease-out !default
     &.is-#{$name}
       &:checked
         + label
-          &::before
+          &::before,
+          &:before
             background: $color
       &.is-outlined
         &:checked
           + label
-            &::before
+            &::before,
+            &:before
               background-color: transparent
               border-color: $color !important
-            &::after
+            &::after,
+            &:after
               background: $color
       &.is-thin
         &.is-outlined
           + label
-            &::after
+            &::after,
+            &:after
               box-shadow: none
     &.is-unchecked-#{$name}
       + label
-        &::before
+        &::before,
+        &:before
           background: $color
       &.is-outlined
         + label
-          &::before
+          &::before,
+          &:before
             background-color: transparent
             border-color: $color !important
-          &::after
+          &::after,
+          &:after
             background: $color
