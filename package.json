@@ -1,8 +1,10 @@
 {
   "name": "bulma-switch",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "Display classic checkbox as a switch button, in different colors, sizes, and states ",
-  "main": "./dist/css/bulma-switch.min.css",
+  "main": "dist/css/bulma-switch.min.css",
+  "style": "dist/css/bulma-switch.min.css",
+  "sass": "src/sass/index.sass",
   "scripts": {
     "build": "gulp",
     "commit": "git-cz",
