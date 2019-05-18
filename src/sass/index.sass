@@ -11,15 +11,18 @@ $switch-focus: 1px dotted $grey-light !default
 =switch-size($size)
 	$switch-height: $size * 1.5
 	$switch-width: $switch-height * 2
-	$paddle-height: calc($switch-height - ($switch-paddle-offset * 2))
-	$paddle-width: calc($switch-height - ($switch-paddle-offset * 2))
-	$paddle-active-offest: calc($switch-width - $paddle-width - ($switch-paddle-offset * 1.5))
+	$paddle-height: $switch-height - ($switch-paddle-offset * 2)
+	$paddle-width: $switch-height - ($switch-paddle-offset * 2)
+	$paddle-active-offest: $switch-width - $paddle-width - ($switch-paddle-offset * 1.5)
 
 	+ label
 		position: relative
-		display: initial
+		display: iniline-flex
+		align-items: center
+		justify-content: flex-start
 		font-size: $size
-		line-height: initial
+		height: $control-height
+		line-height: $control-line-height
 		padding-left: $switch-width + .5
 		padding-top: .2rem
 		cursor: pointer
@@ -41,7 +44,7 @@ $switch-focus: 1px dotted $grey-light !default
 		&:after
 			display: block
 			position: absolute
-			top: ( $switch-height / 2 ) - ( $paddle-height / 2 )
+			top: ($switch-height / 2) - ($paddle-height / 2)
 			left: $switch-paddle-offset
 			width: $paddle-width
 			height: $paddle-height
@@ -192,3 +195,8 @@ $switch-focus: 1px dotted $grey-light !default
 					&::after,
 					&:after
 						background: $color
+
+.field-body
+	.switch[type="checkbox"]
+		+ label
+			margin-top: .375em
