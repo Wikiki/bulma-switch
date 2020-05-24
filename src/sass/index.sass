@@ -7,6 +7,8 @@ $switch-paddle-background-active: $primary !default
 $switch-paddle-offset: 0.25rem !default
 $switch-paddle-transition: all 0.25s ease-out !default
 $switch-focus: 1px dotted $grey-light !default
+$control-height: 1em;
+$control-line-height: 2em;
 
 =switch-size($size)
 	$switch-height: $size * 1.5
@@ -104,7 +106,7 @@ $switch-focus: 1px dotted $grey-light !default
 		+ label
 			&::before,
 			&:before
-				top: $switch-height / 2.75
+				top: $switch-height / 5
 				height: $switch-height / 4
 			&::after,
 			&:after
