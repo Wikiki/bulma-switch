@@ -31,7 +31,7 @@ $switch-focus: 1px dotted $grey-light !default
 		&:before
 			position: absolute
 			display: block
-			top: calc( 50% - #{$switch-height} / 2 )
+			top: calc( 50% - #{$switch-height} * 0.5 )
 			left: 0
 			width: $switch-width
 			height: $switch-height
@@ -44,7 +44,7 @@ $switch-focus: 1px dotted $grey-light !default
 		&:after
 			display: block
 			position: absolute
-			top: calc( 50% - #{$paddle-height} / 2 )
+			top: calc( 50% - #{$paddle-height} * 0.5 )
 			left: $switch-paddle-offset
 			width: $paddle-width
 			height: $paddle-height
