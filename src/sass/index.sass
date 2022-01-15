@@ -54,6 +54,17 @@ $switch-focus: 1px dotted $grey-light !default
 			transition: $switch-paddle-transition
 			content: ''
 
+		.switch-active,	.switch-inactive
+			font-size: $size - 0.1
+			z-index: 1
+			margin-top: -4px
+		&.has-text-inside
+			.switch-inactive
+				margin-left: -($paddle-active-offest + 0.3)
+			.switch-active
+				margin-left: -($paddle-active-offest * 2)
+
+
 	&.is-rtl
 		+ label
 			padding-left: 0
@@ -104,8 +115,8 @@ $switch-focus: 1px dotted $grey-light !default
 		+ label
 			&::before,
 			&:before
-				top: $switch-height * 0.36
-				height: $switch-height * 0.25
+				top: divide($switch-height, 2.75)
+				height: divide($switch-height, 4)
 			&::after,
 			&:after
 				box-shadow: 0px 0px 3px $grey
@@ -160,11 +171,20 @@ $switch-focus: 1px dotted $grey-light !default
 		$color: nth($pair, 1)
 		$color-invert: nth($pair, 2)
 		&.is-#{$name}
+			+ label
+				.switch-active
+					display: none
+				.switch-inactive
+					display: inline-block
 			&:checked
 				+ label
 					&::before,
 					&:before
 						background: $color
+					.switch-active
+						display: inline-block
+					.switch-inactive
+						display: none
 			&.is-outlined
 				&:checked
 					+ label
